@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 public class FileHandler {
     private static final Logger LOGGER = Logger.getLogger(FileHandler.class.getName());
-    public static boolean previousLineIsParagraph = false;
+    private static boolean previousLineIsParagraph = false;
 
     public static void deleteFile(String path) {
         try {
@@ -27,7 +27,6 @@ public class FileHandler {
             File file = new File(output);
 
             if (file.createNewFile()) {
-                // In the case of an empty input file do I return null
                 List<String> allLines = Files.readAllLines(Paths.get(input));
                 for (String line : allLines) {
                     process(line, output);

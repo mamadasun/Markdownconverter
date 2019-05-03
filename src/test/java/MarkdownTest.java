@@ -1,4 +1,3 @@
-import com.michael.amadasun.MarkdownApplication;
 import com.michael.amadasun.service.FileHandler;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
